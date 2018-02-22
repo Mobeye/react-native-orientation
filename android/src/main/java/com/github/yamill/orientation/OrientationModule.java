@@ -39,7 +39,7 @@ public class OrientationModule extends ReactContextBaseJavaModule implements Lif
         final OrientationEventListener specificOrientationListener = new OrientationEventListener(ctx) {
             @Override
             public void onOrientationChanged(int orientation) {
-                String specificOrientation = "UNKNOWN";
+                String specificOrientation = currentSpecificOrientation;
 
                 if (Math.abs(orientation) < SPECIFIC_ORIENTATION_OFFSET) {
                     specificOrientation = "PORTRAIT";
